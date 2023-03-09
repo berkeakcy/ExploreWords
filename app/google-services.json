@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "785926092134",
+    "project_id": "explorewords-8303e",
+    "storage_bucket": "explorewords-8303e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785926092134:android:041fa7f1a321d3183544a7",
+        "android_client_info": {
+          "package_name": "com.example.englishwords"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785926092134-8rdvo8g8gv5o9ov81e46pet2b77fjpgv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhxjp_BeyZgnMKMOMcnUABIvod2ErEDzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785926092134-8rdvo8g8gv5o9ov81e46pet2b77fjpgv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

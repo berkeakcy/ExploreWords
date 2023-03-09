@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pagegb"
+        tools:context=".LevelFragment">
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/white"
+            android:text="BİR SEVİYE SEÇİNİZ"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:cornerRadius="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@color/white"
+            android:checked="false"
+            android:text="ToggleButton"
+            android:textOff="ING -> TR"
+            android:textOn="TR -> ING"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+        <Button
+            android:id="@+id/a1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/white"
+            android:text="A1"
+            android:textColor="@color/black"
+            android:textSize="80dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/a2Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
+
+        <Button
+            android:id="@+id/a2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/white"
+            android:text="A2"
+            android:textColor="@color/black"
+            android:textSize="80dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/a1Button"
+            app:layout_constraintTop_toTopOf="@+id/a1Button" />
+
+        <Button
+            android:id="@+id/b1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/white"
+            android:text="B1"
+            android:textColor="@color/black"
+            android:textSize="80dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/a1Button"
+            app:layout_constraintTop_toBottomOf="@+id/a1Button" />
+
+        <Button
+            android:id="@+id/b2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="B2"
+            android:textColor="@color/black"
+            android:textSize="80dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/a2Button"
+            app:layout_constraintTop_toTopOf="@+id/b1Button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.englishwords.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_levelFragment"
+            app:destination="@id/levelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/levelFragment"
+        android:name="com.example.englishwords.LevelFragment"
+        tools:layout="@layout/fragment_level">
+        <action
+            android:id="@+id/action_levelFragment_to_wordsFragment"
+            app:destination="@id/wordsFragment" />
+        <action
+            android:id="@+id/action_levelFragment_to_sentencesFragment"
+            app:destination="@id/sentencesFragment" />
+        <argument
+            android:name="tur"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/sentencesFragment"
+        android:name="com.example.englishwords.SentencesFragment"
+        tools:layout="@layout/fragment_sentences" />
+    <fragment
+        android:id="@+id/wordsFragment"
+        android:name="com.example.englishwords.WordsFragment"
+        tools:layout="@layout/fragment_words">
+        <argument
+            android:name="tur"
+            app:argType="integer" />
+        <argument
+            android:name="translation"
+            app:argType="integer" />
+        <argument
+            android:name="level"
+            app:argType="integer" />
+    </fragment>
+</navigation>
