@@ -17,7 +17,7 @@ class WordsFragment : Fragment() {
     private lateinit var binding: FragmentWordsBinding
     private lateinit var wordsViewModel:WordsViewModel
     private val args:WordsFragmentArgs by navArgs()
-    private var list = ArrayList<Translation>()
+    private var translationList = ArrayList<Translation>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,17 +29,16 @@ class WordsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        wordsViewModel.getWord()
         wordsViewModel.wordList.observe(viewLifecycleOwner){state ->
-            list.clear()
+            translationList.clear()
             when(state){
                 is UIState.Loading ->  Log.e("WordsFragment","Loading")
                 is UIState.Failure ->  Log.e("WordsFragment","error")
                 is UIState.Success -> {
                     state.data.forEach{
-                        list.add(it)
+                        translationList.add(it)
                     }
-                    Log.e("list ",list.toString())
+                    Log.e("list ",translationList.toString())
                 }
             }
         }

@@ -15,7 +15,6 @@ class LevelFragment : Fragment() {
     private lateinit var binding:FragmentLevelBinding
     private val args:LevelFragmentArgs by navArgs()
     private var translation = 0
-    private lateinit var list : ArrayList<Translation>
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

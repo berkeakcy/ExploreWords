@@ -11,12 +11,65 @@ class WordsViewModel(val repository: TranslationRepository,val tur:Int, val tran
     val wordList : LiveData<UIState<ArrayList<Translation>>> get() = _wordList
 
     init {
-        getWord()
+        when(tur){
+            1 -> {
+                when(level){
+                    1 -> getA1Word()
+                    2 -> getA2Word()
+                    3 -> getB1Word()
+                    4 -> getB2Word()
+                }
+            }
+
+            2 -> {
+                when(level){
+                    1 -> getA1Phrase()
+                    2 -> getA2Phrase()
+                    3 -> getB1Phrase()
+                    4 -> getB2Phrase()
+                }
+            }
+        }
     }
 
-    fun getWord(){
+    fun getA1Word(){
         _wordList.value = UIState.Loading
         repository.getA1Word {_wordList.value = it }
+    }
+
+    fun getA2Word(){
+        _wordList.value = UIState.Loading
+        repository.getA2Word { _wordList.value = it }
+    }
+
+    fun getB1Word(){
+        _wordList.value = UIState.Loading
+        repository.getB1Word { _wordList.value = it }
+    }
+
+    fun getB2Word(){
+        _wordList.value = UIState.Loading
+        repository.getB2Word { _wordList.value = it }
+    }
+
+    fun getA1Phrase(){
+        _wordList.value = UIState.Loading
+        repository.getA1Phrase { _wordList.value = it }
+    }
+
+    fun getA2Phrase(){
+        _wordList.value = UIState.Loading
+        repository.getA2Phrase { _wordList.value = it }
+    }
+
+    fun getB1Phrase(){
+        _wordList.value = UIState.Loading
+        repository.getB1Phrase { _wordList.value = it }
+    }
+
+    fun getB2Phrase(){
+        _wordList.value = UIState.Loading
+        repository.getB2Phrase { _wordList.value = it }
     }
 
 }
