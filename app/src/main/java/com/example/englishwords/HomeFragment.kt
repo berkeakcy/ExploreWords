@@ -11,6 +11,9 @@ import androidx.navigation.findNavController
 import com.example.englishwords.Translation.Companion.toTranslation
 import com.example.englishwords.databinding.FragmentHomeBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.tasks.await
 
 class HomeFragment : Fragment() {
 
@@ -25,6 +28,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.buttonKelimeler.setOnClickListener(){
             it.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToLevelFragment(1))
         }

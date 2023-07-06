@@ -24,10 +24,12 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         navController.addOnDestinationChangedListener{_,destination,_ ->
             if(destination.id == R.id.homeFragment){
-                binding.toolbar.visibility = View.GONE
+                binding.toolbar.visibility = View.VISIBLE
+                binding.toolbarHeader.text = ""
             }
             else{
                 binding.toolbar.visibility = View.VISIBLE
+                binding.toolbarHeader.text = "Explore Words"
             }
         }
         appbarConfiguration = AppBarConfiguration(navController.graph)

@@ -4,15 +4,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
 class WordViewModelFactory(
-    private val repositoryImp: TranslationRepositoryImp,
     private val tur:Int,
-    private val translation:Int,
+    private val translation:Boolean,
     private val level:Int
 ) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return if(modelClass.isAssignableFrom(WordsViewModel::class.java!!)){
-            WordsViewModel(this.repositoryImp,this.tur,this.translation,this.level) as T
+            WordsViewModel(this.tur,this.translation,this.level) as T
         } else{
             throw IllegalArgumentException("ViewModel Not Found")
         }
