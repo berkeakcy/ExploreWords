@@ -29,10 +29,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonKelimeler.setOnClickListener(){
+        binding.buttonWords.setOnClickListener(){
             it.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToLevelFragment(1))
         }
-        binding.buttonKaliplar.setOnClickListener(){
+        binding.buttonPhrase.setOnClickListener(){
             it.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToLevelFragment(2))
         }
     }

@@ -10,9 +10,7 @@ data class Translation(
     companion object{
         fun DocumentSnapshot.toTranslation():Translation?{
             val eng = getString("eng")
-                //get("eng") as String
             val tr = getString("tr")
-                // get("tr") as String
             return Translation(eng,tr)
         }
     }

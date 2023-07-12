@@ -35,7 +35,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/buttonKelimeler"
+            android:id="@+id/buttonWords"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -52,7 +52,7 @@
             app:cornerRadius="50dp" />
 
         <Button
-            android:id="@+id/buttonKaliplar"
+            android:id="@+id/buttonPhrase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

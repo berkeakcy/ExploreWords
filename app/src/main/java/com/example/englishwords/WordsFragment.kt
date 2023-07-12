@@ -157,7 +157,6 @@ class WordsFragment : Fragment() {
                 translationList = it as ArrayList<Translation>
                 if(translationList.size>2){
                     translationList = wordsViewModel.listShuffle(translationList)
-                    Log.e("before",translationList.toString())
                     binding.answerTextView.text = translationList.get(0).tr
                     rnd = (0..2).random()
                     when(rnd) {
