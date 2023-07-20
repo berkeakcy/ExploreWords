@@ -13,6 +13,7 @@ According to level, you can exercise with english words
 + LiveData
 
 # ScreenShots
-![Adsız tasarım](https://github.com/berkeakcy/ExploreWords/assets/114190610/16a8f958-78e9-4e91-ad1e-3a4be69f9bf9)
+![Adsız tasarım](https://github.com/berkeakcy/ExploreWords/assets/114190610/c2aad22f-8fcb-4840-8b57-bef6cade4171)
+
 
 
